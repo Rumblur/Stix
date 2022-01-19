@@ -13,7 +13,7 @@ class ChatListener(private val plugin: StixPlugin) : Listener {
     fun onChat(event: AsyncPlayerChatEvent) {
         if (event.message.startsWith("/")) return
         if (event.message.contains("@everyone") || event.message.contains("@here") ||
-                event.message.contains("<((@!?\\d+)|(:.+?:\\d+))>")) return
+                event.message.contains("<((@!?\\d+)|(:.+?:\\d+))>".toRegex())) return
         builder.setUsername(event.player.name)
         builder.setAvatarUrl("https://mc-heads.net/avatar/${event.player.name}.png")
         builder.setContent(event.message)
