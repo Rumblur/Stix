@@ -14,7 +14,7 @@ class ChatListener(private val plugin: StixPlugin) : Listener {
         if (event.message.startsWith("/")) return
         if (event.message.contains("@everyone") || event.message.contains("@here")) return
         builder.setUsername(event.player.name)
-        builder.setAvatarUrl("https://mc-heads.net/avatar/${event.player.uniqueId}")
+        builder.setAvatarUrl("https://mc-heads.net/avatar/${event.player.uniqueId}.png")
         builder.setContent(event.message)
         plugin.webhookClient.send(builder.build())
     }
