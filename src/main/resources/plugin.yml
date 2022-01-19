@@ -3,6 +3,5 @@ version: 0.1
 author: Xtimms
 description: Minecraft chat to Discord channel bridge using webhook. Special for Rumblur.
 main: by.rumblur.stix.StixPlugin
-api-version: 1.18
 website: vk.com/rumblur
 prefix: Xtimms | Stix
